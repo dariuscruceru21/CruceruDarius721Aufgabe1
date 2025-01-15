@@ -24,45 +24,31 @@ public class Mitglieder {
 
     public Mitglieder() {}
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getMitgliedsName() {
         return MitgliedsName;
     }
 
-    public void setMitgliedsName(String mitgliedsName) {
-        MitgliedsName = mitgliedsName;
-    }
+
 
     public Haus getHaus() {
         return haus;
     }
 
-    public void setHaus(Haus haus) {
-        this.haus = haus;
-    }
+
 
     public String getEreignis() {
         return ereignis;
     }
 
-    public void setEreignis(String ereignis) {
-        this.ereignis = ereignis;
-    }
+
 
     public String getDatum() {
         return datum;
     }
 
-    public void setDatum(String datum) {
-        this.datum = datum;
-    }
+
 
     @Override
     public String toString() {
