@@ -4,8 +4,7 @@ import Models.Mitglieder;
 import java.io.IOException;
 import java.util.List;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
         Controller controller = new Controller();
@@ -16,8 +15,9 @@ public class Main {
 //        }
         try {
             List<Mitglieder>mitglieders = controller.readFromJson("evenimente.json");
-            controller.mitgliederWithInitial(mitglieders,"B");
-            controller.mitgliedersStarkSortedNachDatum(mitglieders);
+            //controller.mitgliederWithInitial(mitglieders,"B");
+            //controller.mitgliedersStarkSortedNachDatum(mitglieders);
+            controller.nummerVonMitgliederVonEinHaus(mitglieders,"ergebnis.txt");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
