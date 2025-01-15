@@ -17,6 +17,7 @@ public class Main {
         try {
             List<Mitglieder>mitglieders = controller.readFromJson("evenimente.json");
             controller.mitgliederWithInitial(mitglieders,"B");
+            controller.mitgliedersStarkSortedNachDatum(mitglieders);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
