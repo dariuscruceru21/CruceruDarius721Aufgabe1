@@ -11,7 +11,6 @@ import java.util.List;
 
 public class Controller {
     public static List<Mitglieder> readFromJson(String filename) throws IOException {
-        List<Mitglieder> mitglieders = new ArrayList<>();
         ObjectMapper objectMapper = new ObjectMapper();
 
         return objectMapper.readValue(
@@ -20,4 +19,16 @@ public class Controller {
         );
 
     }
+
+    public void mitgliederWithInitial(List<Mitglieder> mitglieders, String letter){
+        System.out.println("Mitglieder mit Names starten mit " + letter + ":");
+        mitglieders.stream()
+                .filter(mitglieder -> mitglieder.getMitgliedsName().charAt(0) == letter.toUpperCase().charAt(0))
+                .map(mitglieder -> mitglieder.getMitgliedsName())
+                .distinct()
+                .forEach(System.out::println);
+    }
+
+
+
 }
